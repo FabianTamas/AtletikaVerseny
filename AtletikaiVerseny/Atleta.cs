@@ -11,19 +11,19 @@
 
         //public string Nev { get; private set; }
 
-        public void Nev()
+        public void Nev(string nev)
         {
-            string[] sor = Split(' ');
+            string[] sor = nev.Split(' ');
             VezNev = sor[1];
             KerNev = sor[2];
-            Nev = sor[1]+""+sor[2];
+            nev = VezNev + KerNev;
         }
 
         public Atleta(string szoveg)
         {
             string[] sor = szoveg.Split(';');
             Rajtszam = sor[0];
-            Nev = sor[1];
+            Nev() = sor[1];
             Egyesulet = sor[2];
             Ugras = int.Parse(sor[3]);
         }
